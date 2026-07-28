@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Generar enlace de pago | Voltorum (interno)</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/voltorum.css">
+<style>
+  body{padding:60px 20px;min-height:100vh}
+  .box{max-width:480px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:32px}
+  .box h1{font-size:1.4rem;margin-bottom:22px}
+  .f{margin-bottom:18px}
+  .f span{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-2);margin-bottom:7px}
+  .f input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line-2);padding:10px 0;font:inherit;color:var(--ink)}
+  .f input:focus{outline:0;border-bottom-color:var(--ink)}
+  .resultado{margin-top:22px;padding:16px 18px;border:1px solid var(--line-2);border-radius:10px;font-size:.86rem;word-break:break-all;display:none}
+  .err{color:#ff8080;font-size:.86rem;margin-top:14px;display:none}
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>Generar enlace de pago</h1>
+    <p style="color:var(--ink-2);font-size:.86rem;margin-bottom:26px">Página interna, no enlazada desde el sitio público. Genera un enlace de pago de Stripe firmado, para enviar a un cliente concreto por WhatsApp o email.</p>
+    <div class="f"><span>Contraseña de administrador</span><input type="password" id="password"></div>
+    <div class="f"><span>Importe (€)</span><input type="number" id="importe" step="0.01" min="0.5" placeholder="p. ej. 180"></div>
+    <div class="f"><span>Concepto</span><input type="text" id="concepto" placeholder="p. ej. Revisión cuadro eléctrico — C/ Alcalá 123"></div>
+    <div class="f"><span>Email del cliente (opcional)</span><input type="email" id="email"></div>
+    <button class="btn btn-g" id="btn" style="width:100%">Generar enlace</button>
+    <p class="err" id="err"></p>
+    <div class="resultado" id="resultado">
+      <div id="enlace" style="margin-bottom:10px"></div>
+      <button class="btn btn-o" id="copiar" style="width:100%">Copiar enlace</button>
+    </div>
+  </div>
+
+<script>
+document.getElementById('btn').addEventListener('click', async function () {
+  const err = document.getElementById('err');
+  const resultado = document.getElementById('resultado');
+  err.style.display = 'none';
+  resultado.style.display = 'none';
+
+  const password = document.getElementById('password').value;
+  const importe = document.getElementById('importe').value;
+  const concepto = document.getElementById('concepto').value;
+  const email = document.getElementById('email').value;
+
+  if (!password || !importe || !concepto) {
+    err.textContent = 'Rellena contraseña, importe y concepto.';
+    err.style.display = 'block';
+    return;
+  }
+
+  try {
+    const res = await fetch('/.netlify/functions/generar-enlace', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, importe, concepto, email }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Error al generar el enlace');
+
+    document.getElementById('enlace').textContent = data.enlace;
+    resultado.style.display = 'block';
+
+    document.getElementById('copiar').onclick = function () {
+      navigator.clipboard.writeText(data.enlace);
+      this.textContent = 'Copiado ✓';
+      setTimeout(() => { this.textContent = 'Copiar enlace'; }, 1800);
+    };
+  } catch (e) {
+    err.textContent = e.message || 'No se ha podido generar el enlace.';
+    err.style.display = 'block';
+  }
+});
+</script>
+</body>
+</html>

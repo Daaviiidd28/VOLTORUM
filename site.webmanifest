@@ -1,0 +1,12 @@
+{
+  "name": "Voltorum — Electricidad y mantenimiento",
+  "short_name": "Voltorum",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0C0E",
+  "theme_color": "#0B0C0E",
+  "icons": [
+    {"src": "/img/favicon-180.png", "sizes": "180x180", "type": "image/png"},
+    {"src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "voltorum-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Funciones serverless de Voltorum: cobro de presupuestos con Stripe Checkout.",
+  "dependencies": {
+    "stripe": "^16.12.0"
+  }
+}

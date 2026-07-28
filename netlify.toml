@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# El webhook de Stripe necesita recibir el cuerpo de la petición tal cual
+# (sin parsear), así que se sirve directamente como función, sin pasar por
+# ninguna redirección que lo modifique.
+
+[[redirects]]
+  from = "/pagar/webhook"
+  to = "/.netlify/functions/stripe-webhook"
+  status = 200

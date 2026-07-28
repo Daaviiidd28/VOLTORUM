@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /pagar/
+Sitemap: https://voltorum.com/sitemap.xml
