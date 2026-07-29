@@ -79,14 +79,78 @@ El original no se ha tocado; todo el trabajo se hizo en una carpeta nueva
 - La web sigue sin ningún dato de pago hardcodeado ni ninguna clave
   secreta en el código: todo se lee de variables de entorno de Netlify.
 
+## Revisión de contenido, conversión y SEO (segunda ronda)
+
+- **Hero**: nuevo titular ("Electricistas en Madrid. Instalaciones, averías
+  y mantenimiento.") y subtítulo orientado a las búsquedas y servicios
+  reales. Botón secundario directo a WhatsApp con presupuesto.
+- **Barra de confianza**: nueva franja bajo el hero con 4 puntos clave
+  (presupuesto gratuito, atención rápida, electricistas cualificados,
+  cobertura en toda la Comunidad de Madrid).
+- **Servicios ampliados de 6 a 9 en portada**: se añadieron Instalaciones
+  eléctricas, Iluminación LED, Enchufes e interruptores y Puntos de luz,
+  cada uno con su propia página de servicio (`/servicios/...`). El
+  servicio de "Revisión y documentación" (antes boletines) se mantiene
+  en `/servicios/` aunque no aparece ya en la portada, para no perder
+  contenido ya creado.
+- **Nueva sección "Por qué elegirnos"**: 6 puntos (atención rápida,
+  presupuestos transparentes, materiales de calidad, soluciones
+  adaptadas, trabajo limpio, garantía).
+- **Proceso ampliado de 4 a 5 pasos**, siguiendo el guion exacto pedido.
+- **Nueva sección de opiniones**: preparada visualmente para reseñas de
+  Google, con 3 tarjetas de marcador de posición — sin inventar ningún
+  texto, autor ni valoración real. Ver `PENDIENTES.md`.
+- **Sección de contacto reforzada** al final de la home: teléfono en
+  grande y pulsable, botón de llamada, botón de WhatsApp y enlace al
+  formulario completo.
+- **Datos de contacto reales activados**: teléfono 611 066 820, WhatsApp
+  (`wa.me/34611066820`) y email info@voltorum.com ya configurados en
+  `js/config.js` y visibles en toda la web (antes placeholders). Se
+  corrigió además un fallo donde el teléfono y el email del footer no se
+  actualizaban con los datos de `config.js` aunque el enlace sí
+  funcionaba — ahora ambos se ven y funcionan correctamente.
+- **SEO**: title y meta description de portada actualizados al texto
+  exacto pedido; datos estructurados Schema.org de tipo
+  `LocalBusiness`/`ElectricalContractor` con teléfono y email reales,
+  zona ampliada a "Comunidad de Madrid".
+- Verificado tras los cambios: las 17 páginas cargan (código 200), 9
+  tarjetas de servicio, 6 ventajas, 5 pasos, 3 tarjetas de opiniones,
+  FAQ y menú móvil funcionando, sin errores de JavaScript.
+
+## Recorte de la home (tercera ronda)
+
+Se quitaron de la portada las secciones que estaban vacías o repetían
+contenido ya presente en otro sitio, para acortar la página:
+
+- **"Trabajos realizados"**: eliminada por completo — eran 3 tarjetas
+  vacías con "Próximamente", lo que transmitía justo lo contrario de
+  "empresa consolidada". Se puede volver a añadir el día que haya 2-3
+  fotos reales de trabajos que mostrar.
+- **Bloques grandes de "Comunidades" y "Negocios"**: eliminados de la
+  portada — ya estaban representados como 2 de las 9 tarjetas de
+  servicios y siguen teniendo su propia página completa
+  (`/comunidades/` y `/negocios/`, accesibles desde el menú y desde su
+  tarjeta de servicio), así que tenerlos también como secciones grandes
+  en la home era repetir el mismo mensaje tres veces.
+- Se mantiene la sección de **opiniones** (vacía mientras no haya
+  reseñas reales) porque ocupa poco espacio y no transmite lo mismo que
+  una sección de "trabajos" sin ningún trabajo que enseñar.
+- Resultado: la portada pasó de ~10.600px a ~8.680px de alto (-18%),
+  sin perder ninguna página ni enlace interno — verificado sin enlaces
+  rotos tras el recorte.
+
 ## Rutas creadas
 
 | Ruta | Contenido |
 |---|---|
 | `/` | Home |
 | `/servicios/` | Índice de servicios |
-| `/servicios/averias-electricas/` | Averías y reparaciones |
+| `/servicios/averias-electricas/` | Averías eléctricas |
+| `/servicios/instalaciones-electricas/` | Instalaciones eléctricas |
 | `/servicios/cuadros-electricos/` | Cuadros eléctricos y protecciones |
+| `/servicios/iluminacion-led/` | Iluminación LED |
+| `/servicios/enchufes-e-interruptores/` | Enchufes e interruptores |
+| `/servicios/puntos-de-luz/` | Puntos de luz |
 | `/servicios/mantenimiento-electrico/` | Mantenimiento preventivo |
 | `/servicios/boletines-documentacion/` | Revisión, diagnóstico y documentación |
 | `/comunidades/` | Electricidad para comunidades de propietarios |

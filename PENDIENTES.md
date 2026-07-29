@@ -39,13 +39,13 @@ cobrar presupuestos con Stripe. Antes de poder usarlo hay que:
 (`sk_test_...`), los pagos son simulados y no se cobra dinero real — útil
 para probar todo el flujo antes de activarlo de verdad.
 
-## 1. Datos de contacto (`js/config.js`) — obligatorio antes de publicar
+## 1. Datos de contacto (`js/config.js`)
 
-- [ ] `telefono_visible` y `telefono_href`
-- [ ] `whatsapp_numero` (formato internacional sin el `+`, ej. `34600000000`)
-- [ ] `email`
-- [ ] `direccion_fiscal` (solo si se va a mostrar públicamente)
-- [ ] `horario` (si se quiere mostrar un horario de atención)
+- [x] `telefono_visible` / `telefono_href` → 611 066 820
+- [x] `whatsapp_numero` → 34611066820 (enlace `wa.me` probado y funcionando)
+- [x] `email` → info@voltorum.com
+- [ ] `direccion_fiscal` (solo si se va a mostrar públicamente — sigue pendiente)
+- [ ] `horario` (si se quiere mostrar un horario de atención — sigue pendiente)
 
 Al cambiar estos valores en un único archivo, se actualizan automáticamente
 el footer, el botón flotante de WhatsApp, el formulario de contacto y los
@@ -65,6 +65,14 @@ datos estructurados (JSON-LD) de todas las páginas.
 - Revisar con un profesional si el texto legal genérico incluido cubre
   las necesidades reales de Voltorum (esto es un borrador funcional, no
   asesoría legal).
+
+## 2.5. Opiniones de Google
+
+La sección "Opiniones" de la home está preparada visualmente (3 tarjetas
+con estrellas) pero con texto de marcador de posición — no se han
+inventado reseñas. En cuanto existan reseñas reales en el perfil de
+Google Business de Voltorum, sustituir el contenido de `.review-card` en
+`_build/home.py` por el texto real, autor y valoración de cada una.
 
 ## 3. Imágenes y contenido visual
 

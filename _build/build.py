@@ -21,7 +21,7 @@ def write(relpath, content):
         f.write(content)
     print("wrote", relpath)
 
-LD_LOCAL_BUSINESS = '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"ElectricalContractor","@id":"https://voltorum.com/#negocio","name":"Voltorum","url":"https://voltorum.com/","image":"https://voltorum.com/img/og.jpg","telephone":"[TELÉFONO]","email":"[EMAIL]","description":"Electricidad y mantenimiento en Madrid: averías, cuadros eléctricos, mantenimiento preventivo y documentación, para comunidades, negocios y particulares.","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"},"areaServed":{"@type":"City","name":"Madrid"}}</script>
+LD_LOCAL_BUSINESS = '''<script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","ElectricalContractor"],"@id":"https://voltorum.com/#negocio","name":"Voltorum","url":"https://voltorum.com/","image":"https://voltorum.com/img/og.jpg","telephone":"+34611066820","email":"info@voltorum.com","priceRange":"€€","description":"Electricistas en Madrid especializados en instalaciones eléctricas, averías, cuadros eléctricos, iluminación LED y mantenimiento, para comunidades, negocios y particulares.","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressRegion":"Madrid","addressCountry":"ES"},"areaServed":{"@type":"AdministrativeArea","name":"Comunidad de Madrid"}}</script>
 '''
 
 LD_FAQ_HOME = '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿El presupuesto tiene algún coste?","acceptedAnswer":{"@type":"Answer","text":"No. El diagnóstico y el presupuesto están incluidos y se entregan por escrito antes de empezar cualquier trabajo."}},{"@type":"Question","name":"¿Todas las instalaciones necesitan un boletín nuevo?","acceptedAnswer":{"@type":"Answer","text":"No necesariamente. Depende del estado, la antigüedad, las modificaciones realizadas o un requerimiento administrativo concreto. Cada caso se valora tras inspeccionar la instalación."}},{"@type":"Question","name":"¿En qué zona trabajáis?","acceptedAnswer":{"@type":"Answer","text":"Madrid capital y municipios cercanos."}}]}</script>
@@ -40,8 +40,8 @@ def breadcrumb_ld(items):
 # ── / ──────────────────────────────────────────────────────────
 write("index.html", common.page(
     depth=0,
-    title="Voltorum — Electricidad y mantenimiento en Madrid",
-    description="Electricidad y mantenimiento sin complicaciones. Soluciones eléctricas para comunidades, negocios y particulares en Madrid. Presupuesto claro, trabajo documentado.",
+    title="Electricistas en Madrid | Voltorum",
+    description="Empresa de electricidad en Madrid especializada en instalaciones eléctricas, averías, cuadros eléctricos, iluminación LED, mantenimiento y comunidades de propietarios. Presupuesto gratuito.",
     path="",
     body=home.body(),
     active="",
@@ -61,12 +61,24 @@ write("servicios/index.html", common.page(
 
 # ── /servicios/*/  (4 detail pages) ─────────────────────────────
 detail_pages = [
-    ("servicios/averias-electricas/", "Averías y reparaciones eléctricas en Madrid | Voltorum",
+    ("servicios/averias-electricas/", "Averías eléctricas en Madrid | Voltorum",
      "Diagnóstico y reparación de averías eléctricas en Madrid: cortes, diferenciales que saltan, enchufes o puntos de luz sin funcionar.",
      servicios_detail.averias()),
+    ("servicios/instalaciones-electricas/", "Instalaciones eléctricas en Madrid | Voltorum",
+     "Instalaciones eléctricas nuevas y reformas completas en Madrid, para vivienda, negocio o comunidad. Presupuesto gratuito.",
+     servicios_detail.instalaciones()),
     ("servicios/cuadros-electricos/", "Cuadros eléctricos y protecciones en Madrid | Voltorum",
      "Revisión, ampliación y sustitución de cuadros eléctricos, magnetotérmicos y diferenciales en Madrid.",
      servicios_detail.cuadros()),
+    ("servicios/iluminacion-led/", "Iluminación LED en Madrid | Voltorum",
+     "Sustitución e instalación de iluminación LED en Madrid, para reducir el consumo sin perder luz.",
+     servicios_detail.iluminacion_led()),
+    ("servicios/enchufes-e-interruptores/", "Enchufes e interruptores en Madrid | Voltorum",
+     "Cambio, ampliación y reparación de enchufes e interruptores en Madrid.",
+     servicios_detail.enchufes()),
+    ("servicios/puntos-de-luz/", "Puntos de luz en Madrid | Voltorum",
+     "Nuevos puntos de luz o reubicación de los existentes en Madrid, con acabado limpio.",
+     servicios_detail.puntos_de_luz()),
     ("servicios/mantenimiento-electrico/", "Mantenimiento eléctrico preventivo en Madrid | Voltorum",
      "Revisiones periódicas para comunidades y negocios en Madrid: detectar antes lo que luego sale caro.",
      servicios_detail.mantenimiento()),

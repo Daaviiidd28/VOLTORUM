@@ -8,7 +8,7 @@ def body():
 <section>
   <div class="wrap art">
     <h1 class="rv">Servicios eléctricos en Madrid</h1>
-    <p class="meta rv">Averías, cuadros, mantenimiento y documentación</p>
+    <p class="meta rv">Instalaciones, averías, cuadros, LED y mantenimiento</p>
     <p class="rv" style="color:var(--ink-2);max-width:64ch;font-size:1.02rem;line-height:1.72">Cada instalación es distinta, pero el criterio es siempre el mismo: diagnóstico antes de presupuestar, presupuesto por escrito antes de trabajar, y todo documentado al terminar.</p>
   </div>
 </section>
@@ -18,16 +18,36 @@ def body():
     <div class="trio rv">
       <a class="blk" href="./averias-electricas/">
         {icon('rayo')}
-        <h3>Averías y reparaciones eléctricas</h3>
+        <h3>Averías eléctricas</h3>
         <p>Cortes de luz, disparos del diferencial, enchufes o puntos de luz que dejan de funcionar.</p>
+      </a>
+      <a class="blk" href="./instalaciones-electricas/">
+        {icon('llave')}
+        <h3>Instalaciones eléctricas</h3>
+        <p>Instalaciones nuevas o reformas completas, adaptadas a vivienda, negocio o comunidad.</p>
       </a>
       <a class="blk" href="./cuadros-electricos/">
         {icon('cuadro')}
         <h3>Cuadros eléctricos y protecciones</h3>
         <p>Revisión, ampliación o sustitución de cuadros, magnetotérmicos y diferenciales.</p>
       </a>
+      <a class="blk" href="./iluminacion-led/">
+        {icon('bombilla')}
+        <h3>Iluminación LED</h3>
+        <p>Sustitución e instalación de iluminación LED para ahorrar en consumo sin perder luz.</p>
+      </a>
+      <a class="blk" href="./enchufes-e-interruptores/">
+        {icon('enchufe')}
+        <h3>Enchufes e interruptores</h3>
+        <p>Cambio, ampliación o reparación de enchufes e interruptores.</p>
+      </a>
+      <a class="blk" href="./puntos-de-luz/">
+        {icon('rayo')}
+        <h3>Puntos de luz</h3>
+        <p>Nuevos puntos de luz o reubicación de los existentes, con acabado limpio.</p>
+      </a>
       <a class="blk" href="./mantenimiento-electrico/">
-        {icon('llave')}
+        {icon('reloj')}
         <h3>Mantenimiento eléctrico preventivo</h3>
         <p>Revisiones periódicas para detectar antes lo que luego sale caro.</p>
       </a>

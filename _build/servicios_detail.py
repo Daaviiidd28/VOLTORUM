@@ -154,3 +154,103 @@ def boletines():
             ("Comunidades", "../../comunidades/"),
         ],
     )
+
+def instalaciones():
+    return _template(
+        titulo="Instalaciones eléctricas",
+        eyebrow="Instalación nueva o reforma completa",
+        intro='<p class="rv" style="color:var(--ink-2);max-width:64ch;font-size:1.02rem;line-height:1.72">Una reforma, una obra nueva o una instalación que ha quedado corta con el tiempo. Se estudia el uso real del espacio antes de tirar un solo metro de cable, para no repetir en unos años lo que se hace ahora.</p>',
+        puntos=[
+            ("Proyecto de la instalación", "adaptado al uso real de la vivienda, negocio o comunidad"),
+            ("Ejecución completa", "desde el cuadro hasta el último punto de luz o enchufe"),
+            ("Materiales homologados", "pensados para durar, no para salir del paso"),
+            ("Entrega documentada", "con lo instalado explicado, útil de cara a futuras revisiones"),
+        ],
+        cuando=[
+            "Obra nueva o reforma integral de vivienda, local o negocio.",
+            "La instalación actual se ha quedado corta de circuitos o potencia.",
+            "Se cambia el uso del espacio y la instalación no se ajusta al nuevo uso.",
+            "Se quiere modernizar una instalación antigua de forma completa, no solo parchearla.",
+        ],
+        extra_html="",
+        relacionados=[
+            ("Cuadros eléctricos", "../cuadros-electricos/"),
+            ("Iluminación LED", "../iluminacion-led/"),
+            ("Negocios y locales", "../../negocios/"),
+        ],
+    )
+
+def iluminacion_led():
+    return _template(
+        titulo="Iluminación LED",
+        eyebrow="Menos consumo, misma luz",
+        intro='<p class="rv" style="color:var(--ink-2);max-width:64ch;font-size:1.02rem;line-height:1.72">Cambiar a iluminación LED suele ser de las intervenciones que más se nota en la factura con menos obra por medio. Se valora punto por punto qué sustituir y con qué temperatura de luz, en vez de cambiar todo por cambiar.</p>',
+        puntos=[
+            ("Sustitución de luminarias", "por equivalentes LED, sin perder nivel de luz"),
+            ("Nuevos puntos LED", "cuando el proyecto lo pide, integrados con el resto de la instalación"),
+            ("Elección de temperatura de color", "según el uso de cada estancia o zona"),
+            ("Cálculo de ahorro estimado", "orientativo, antes de decidir el alcance del cambio"),
+        ],
+        cuando=[
+            "La factura de la luz sube y la iluminación es antigua (halógenos, fluorescentes).",
+            "Un negocio quiere mejorar la iluminación de cara al cliente sin disparar el consumo.",
+            "Una comunidad quiere reducir el gasto de zonas comunes con luz permanente.",
+            "Se reforma un espacio y toca decidir el tipo de iluminación desde cero.",
+        ],
+        extra_html="",
+        relacionados=[
+            ("Puntos de luz", "../puntos-de-luz/"),
+            ("Instalaciones eléctricas", "../instalaciones-electricas/"),
+            ("Mantenimiento preventivo", "../mantenimiento-electrico/"),
+        ],
+    )
+
+def enchufes():
+    return _template(
+        titulo="Enchufes e interruptores",
+        eyebrow="Cambio, ampliación y reparación",
+        intro='<p class="rv" style="color:var(--ink-2);max-width:64ch;font-size:1.02rem;line-height:1.72">Un enchufe suelto, un interruptor que ya no hace buen contacto, o simplemente faltan tomas donde hacen falta de verdad. Trabajo puntual, pero con el mismo criterio que cualquier otro: revisar antes de cambiar.</p>',
+        puntos=[
+            ("Sustitución de mecanismos", "enchufes, interruptores y conmutadores dañados o anticuados"),
+            ("Ampliación de tomas", "donde el uso real del espacio lo pide"),
+            ("Revisión de conexiones", "un mecanismo flojo puede ser síntoma de algo más, se comprueba"),
+            ("Acabado a juego", "con el resto de mecanismos de la estancia"),
+        ],
+        cuando=[
+            "Un enchufe o interruptor no hace buen contacto o se calienta.",
+            "Faltan tomas de corriente donde realmente se necesitan.",
+            "Se renueva la decoración y se aprovecha para cambiar los mecanismos.",
+            "Los mecanismos actuales son antiguos y no cumplen la normativa vigente.",
+        ],
+        extra_html="",
+        relacionados=[
+            ("Puntos de luz", "../puntos-de-luz/"),
+            ("Averías eléctricas", "../averias-electricas/"),
+            ("Instalaciones eléctricas", "../instalaciones-electricas/"),
+        ],
+    )
+
+def puntos_de_luz():
+    return _template(
+        titulo="Puntos de luz",
+        eyebrow="Nuevos puntos o reubicación",
+        intro='<p class="rv" style="color:var(--ink-2);max-width:64ch;font-size:1.02rem;line-height:1.72">Un punto de luz mal colocado se nota cada día. Ya sea añadir uno nuevo o mover el que hay, el trabajo se hace con acabado limpio, sin dejar el techo o la pared peor de como estaban.</p>',
+        puntos=[
+            ("Nuevos puntos de luz", "donde el espacio lo necesite, con el circuito adecuado"),
+            ("Reubicación de puntos existentes", "cuando la distribución actual no funciona"),
+            ("Instalación de mecanismos de control", "interruptores simples, conmutados o regulables"),
+            ("Acabado cuidado", "en pared o techo, sin dejar marcas visibles del trabajo"),
+        ],
+        cuando=[
+            "Falta luz en una zona concreta de la vivienda, negocio o local.",
+            "Un punto de luz está mal colocado y molesta al uso diario del espacio.",
+            "Se reforma una estancia y toca replantear dónde va cada punto de luz.",
+            "Se añade una zona nueva (trastero, buhardilla, terraza cubierta) sin puntos de luz.",
+        ],
+        extra_html="",
+        relacionados=[
+            ("Iluminación LED", "../iluminacion-led/"),
+            ("Enchufes e interruptores", "../enchufes-e-interruptores/"),
+            ("Instalaciones eléctricas", "../instalaciones-electricas/"),
+        ],
+    )

@@ -6,16 +6,15 @@ def body():
     return f'''<!-- ══ HERO ══ -->
 <header class="hero">
   <div class="hero-in" id="heroIn">
-    <p class="eyebrow">Madrid &middot; Electricidad y mantenimiento</p>
+    <p class="eyebrow">Madrid &middot; Electricistas profesionales</p>
     <h1>
-      <span class="ln"><b>Electricidad y mantenimiento</b></span>
-      <span class="ln"><b>sin complicaciones.</b></span>
+      <span class="ln"><b>Electricistas en Madrid.</b></span>
+      <span class="ln"><b>Instalaciones, averías y mantenimiento.</b></span>
     </h1>
-    <p class="hero-sub">Soluciones eléctricas para comunidades, negocios y particulares en Madrid. Presupuesto claro, trabajo documentado y seguimiento real.</p>
+    <p class="hero-sub">Ofrecemos instalaciones eléctricas, averías urgentes, cuadros eléctricos, iluminación LED, enchufes, puntos de luz y mantenimiento para viviendas, empresas y comunidades de propietarios. Presupuesto gratuito y atención rápida.</p>
     <div class="hero-cta">
       <a class="btn btn-g" href="./contacto/">Solicitar presupuesto <span class="arw">&#8599;</span></a>
-      <a class="btn btn-o" href="./servicios/averias-electricas/">Contar una avería</a>
-      <a class="btn btn-o" data-cfg-href="whatsapp" data-wa-msg="Hola Voltorum, quiero hablar sobre un trabajo eléctrico." href="#">Hablar por WhatsApp</a>
+      <a class="btn btn-o" data-cfg-href="whatsapp" data-wa-msg="Hola Voltorum, quiero pedir un presupuesto." href="#">Pedir presupuesto por WhatsApp</a>
     </div>
 
     <div class="plate" id="plate">
@@ -23,13 +22,23 @@ def body():
     </div>
 
     <div class="specs">
-      <div><b class="lit">Madrid</b><span>Y municipios cercanos</span></div>
+      <div><b class="lit">Madrid</b><span>Y toda la Comunidad de Madrid</span></div>
       <div><b>Escrito</b><span>Presupuesto siempre por escrito</span></div>
       <div><b>0 &euro;</b><span>Diagnóstico incluido en el presupuesto</span></div>
       <div><b>1 a 1</b><span>Trato directo, sin intermediarios</span></div>
     </div>
   </div>
 </header>
+
+<!-- ══ BARRA DE CONFIANZA ══ -->
+<section class="trust rv" aria-label="Por qué confiar en Voltorum">
+  <div class="wrap trust-in">
+    <div><span class="trust-check">&#10003;</span>Presupuesto gratuito</div>
+    <div><span class="trust-check">&#10003;</span>Atención rápida</div>
+    <div><span class="trust-check">&#10003;</span>Electricistas cualificados</div>
+    <div><span class="trust-check">&#10003;</span>Servicio en toda la Comunidad de Madrid</div>
+  </div>
+</section>
 
 {mini_glow_divider()}
 
@@ -48,23 +57,38 @@ def body():
     <div class="trio rv">
       <a class="blk" href="./servicios/averias-electricas/">
         {icon('rayo')}
-        <h3>Averías y reparaciones</h3>
-        <p>Cortes, disparos del diferencial, enchufes o puntos de luz que dejan de funcionar. Diagnóstico y reparación con el problema explicado, no solo solucionado.</p>
+        <h3>Averías eléctricas</h3>
+        <p>Cortes, disparos del diferencial, enchufes o puntos de luz que dejan de funcionar. Diagnóstico y reparación urgente.</p>
+      </a>
+      <a class="blk" href="./servicios/instalaciones-electricas/">
+        {icon('llave')}
+        <h3>Instalaciones eléctricas</h3>
+        <p>Instalaciones nuevas o reformas completas, adaptadas a vivienda, negocio o comunidad.</p>
       </a>
       <a class="blk" href="./servicios/cuadros-electricos/">
         {icon('cuadro')}
-        <h3>Cuadros eléctricos y protecciones</h3>
-        <p>Revisión, ampliación o sustitución de cuadros, magnetotérmicos y diferenciales que ya no cumplen con la instalación actual.</p>
+        <h3>Cuadros eléctricos</h3>
+        <p>Revisión, ampliación o sustitución de cuadros, magnetotérmicos y diferenciales.</p>
+      </a>
+      <a class="blk" href="./servicios/iluminacion-led/">
+        {icon('bombilla')}
+        <h3>Iluminación LED</h3>
+        <p>Sustitución e instalación de iluminación LED para ahorrar en consumo sin perder luz.</p>
+      </a>
+      <a class="blk" href="./servicios/enchufes-e-interruptores/">
+        {icon('enchufe')}
+        <h3>Enchufes e interruptores</h3>
+        <p>Cambio, ampliación o reparación de enchufes e interruptores en cualquier estancia.</p>
+      </a>
+      <a class="blk" href="./servicios/puntos-de-luz/">
+        {icon('rayo')}
+        <h3>Puntos de luz</h3>
+        <p>Nuevos puntos de luz o reubicación de los existentes, con acabado limpio.</p>
       </a>
       <a class="blk" href="./servicios/mantenimiento-electrico/">
-        {icon('llave')}
+        {icon('reloj')}
         <h3>Mantenimiento preventivo</h3>
-        <p>Revisiones periódicas para detectar antes lo que luego sale caro: conexiones flojas, sobrecargas o material desgastado.</p>
-      </a>
-      <a class="blk" href="./servicios/boletines-documentacion/">
-        {icon('documento')}
-        <h3>Revisión y documentación</h3>
-        <p>Diagnóstico del estado real de una instalación y gestión de la documentación que corresponda tras la inspección.</p>
+        <p>Revisiones periódicas para detectar antes lo que luego sale caro.</p>
       </a>
       <a class="blk" href="./comunidades/">
         {icon('edificio')}
@@ -73,158 +97,136 @@ def body():
       </a>
       <a class="blk" href="./negocios/">
         {icon('tienda')}
-        <h3>Negocios y locales</h3>
+        <h3>Negocios y locales comerciales</h3>
         <p>Instalaciones adaptadas al uso comercial, con los tiempos de parada al mínimo posible.</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ══ 02 · COMUNIDADES ══ -->
-<section id="comunidades" style="background:var(--paper-2)">
+<!-- ══ 02 · POR QUÉ ELEGIRNOS ══ -->
+<section id="ventajas" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="sh rv">
-      <p class="eyebrow"><i>02</i>Comunidades de propietarios</p>
-      <h2>Un solo contacto<br><em>para todo el edificio.</em></h2>
-      <div class="sh-side">
-        <p class="lede">Administradores de fincas y presidentes de comunidad necesitan respuestas rápidas y presupuestos que se puedan llevar a junta sin sorpresas. Ese es el trato.</p>
-        <div class="chips">
-          <span>Zonas comunes</span>
-          <span>Portales y garajes</span>
-          <span>Cuartos de contadores</span>
-          <span>Urgencias coordinadas</span>
-        </div>
-        <p style="margin-top:22px"><a href="./comunidades/" style="border-bottom:1px solid var(--line-2);padding-bottom:7px;font-size:.92rem;display:inline-flex;gap:34px;align-items:center">Electricidad para comunidades <span class="arw">&#8599;</span></a></p>
+      <p class="eyebrow"><i>02</i>Por qué elegirnos</p>
+      <h2>Lo que no<br><em>se negocia.</em></h2>
+    </div>
+    <div class="adv-grid rv">
+      <div class="adv">
+        {icon('reloj')}
+        <h3>Atención rápida</h3>
+        <p>Respuesta ágil ante averías y urgencias, sin dejarte esperando.</p>
+      </div>
+      <div class="adv">
+        {icon('recibo')}
+        <h3>Presupuestos transparentes</h3>
+        <p>Por escrito y desglosados, antes de empezar cualquier trabajo.</p>
+      </div>
+      <div class="adv">
+        {icon('check')}
+        <h3>Materiales de calidad</h3>
+        <p>Componentes homologados, pensados para durar, no para salir del paso.</p>
+      </div>
+      <div class="adv">
+        {icon('llave')}
+        <h3>Soluciones adaptadas</h3>
+        <p>Cada instalación es distinta: la solución se ajusta a tu caso, no al revés.</p>
+      </div>
+      <div class="adv">
+        {icon('escudo')}
+        <h3>Trabajo limpio</h3>
+        <p>Se deja el espacio como estaba, o mejor, al terminar la intervención.</p>
+      </div>
+      <div class="adv">
+        {icon('candado')}
+        <h3>Garantía en nuestros trabajos</h3>
+        <p>Respaldo sobre lo realizado, con seguimiento si surge cualquier duda.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 03 · NEGOCIOS ══ -->
-<section id="negocios">
-  <div class="wrap">
-    <div class="sh rv">
-      <p class="eyebrow"><i>03</i>Negocios y locales</p>
-      <h2>Menos tiempo parado,<br><em>más tiempo abierto.</em></h2>
-      <div class="sh-side">
-        <p class="lede">Comercios, oficinas y locales de hostelería trabajan con horarios que no dan margen. Los trabajos se planifican para interferir lo mínimo posible en la actividad.</p>
-        <div class="chips">
-          <span>Locales comerciales</span>
-          <span>Oficinas</span>
-          <span>Hostelería</span>
-          <span>Reformas de local</span>
-        </div>
-        <p style="margin-top:22px"><a href="./negocios/" style="border-bottom:1px solid var(--line-2);padding-bottom:7px;font-size:.92rem;display:inline-flex;gap:34px;align-items:center">Electricidad para negocios <span class="arw">&#8599;</span></a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 04 · PROCESO ══ -->
-<section id="proceso" style="background:var(--paper-2)">
+<!-- ══ 03 · PROCESO ══ -->
+<section id="proceso">
   <div class="wrap">
     <div class="proc">
       <div class="proc-l rv">
-        <p class="eyebrow"><i>04</i>Cómo se trabaja</p>
-        <h2 style="font-size:clamp(1.8rem,4.2vw,3.2rem);font-weight:600;letter-spacing:-.05em;line-height:1.02;margin-top:18px">Cuatro pasos,<br><em class="it">sin rodeos.</em></h2>
+        <p class="eyebrow"><i>03</i>Cómo se trabaja</p>
+        <h2 style="font-size:clamp(1.8rem,4.2vw,3.2rem);font-weight:600;letter-spacing:-.05em;line-height:1.02;margin-top:18px">Cinco pasos,<br><em class="it">sin rodeos.</em></h2>
       </div>
       <div class="rail">
         <div class="track"></div><div class="fill" id="fill"></div>
         <div class="step">
           <span class="dot"></span><b class="no">01</b>
-          <h3>Cuéntanos el problema</h3>
+          <h3>Contactas con nosotros</h3>
           <p>Por teléfono, WhatsApp o el formulario de contacto. Con una descripción breve y, si puede ser, alguna foto, ya se puede orientar el trabajo.</p>
         </div>
         <div class="step">
           <span class="dot"></span><b class="no">02</b>
-          <h3>Revisamos la instalación</h3>
+          <h3>Analizamos tu necesidad</h3>
           <p>Diagnóstico en el lugar antes de dar cualquier cifra cerrada. No se presupuesta a ciegas.</p>
         </div>
         <div class="step">
           <span class="dot"></span><b class="no">03</b>
-          <h3>Recibes un presupuesto claro</h3>
+          <h3>Recibes presupuesto gratuito</h3>
           <p>Por escrito, con el trabajo desglosado, antes de tocar nada.</p>
         </div>
         <div class="step">
           <span class="dot"></span><b class="no">04</b>
-          <h3>Ejecutamos y documentamos</h3>
-          <p>El trabajo se entrega explicado: qué se ha hecho, con qué material y qué queda pendiente, si algo queda pendiente.</p>
+          <h3>Realizamos el trabajo</h3>
+          <p>Con materiales de calidad y el espacio recogido al terminar.</p>
+        </div>
+        <div class="step">
+          <span class="dot"></span><b class="no">05</b>
+          <h3>Seguimiento y soporte</h3>
+          <p>Disponibilidad para resolver dudas después de la intervención, no solo durante.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 05 · VENTAJAS ══ -->
-<section id="ventajas">
+<!-- ══ 06 · OPINIONES ══ -->
+<section id="opiniones" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="sh rv">
-      <p class="eyebrow"><i>05</i>Por qué Voltorum</p>
-      <h2>Lo que no<br><em>se negocia.</em></h2>
-    </div>
-    <div class="adv-grid rv">
-      <div class="adv">
-        {icon('recibo')}
-        <h3>Presupuestos claros</h3>
-        <p>Por escrito y desglosados, antes de empezar cualquier trabajo.</p>
-      </div>
-      <div class="adv">
-        {icon('chat')}
-        <h3>Atención personalizada</h3>
-        <p>Se habla con la misma persona de principio a fin, sin pasar por varios departamentos.</p>
-      </div>
-      <div class="adv">
-        {icon('camara')}
-        <h3>Trabajo documentado</h3>
-        <p>Registro de lo realizado, útil para actas de comunidad o control interno del negocio.</p>
-      </div>
-      <div class="adv">
-        {icon('reloj')}
-        <h3>Seguimiento posterior</h3>
-        <p>Disponibilidad para resolver dudas después de la intervención, no solo durante.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 06 · PROYECTOS ══ -->
-<section id="proyectos" style="background:var(--paper-2)">
-  <div class="wrap">
-    <div class="sh rv">
-      <p class="eyebrow"><i>06</i>Trabajos realizados</p>
-      <h2>Casos reales,<br><em>en construcción.</em></h2>
+      <p class="eyebrow"><i>04</i>Opiniones</p>
+      <h2>Lo que dicen<br><em>nuestros clientes.</em></h2>
       <div class="sh-side">
-        <p class="lede">Esta sección está preparada para mostrar trabajos concretos con fotografías reales una vez estén disponibles. Ver <a href="#" style="text-decoration:underline">PENDIENTES.md</a> para completar esta parte.</p>
+        <p class="lede">Este espacio está preparado para mostrar las reseñas reales de Google de Voltorum en cuanto estén disponibles.</p>
       </div>
     </div>
-    <div class="guias rv">
-      <div class="gc" style="opacity:.5">
-        <h3>Próximamente</h3>
-        <p>Espacio reservado para un caso real de comunidad de propietarios.</p>
+    <div class="reviews rv" aria-live="polite">
+      <div class="review-card ph">
+        <div class="review-stars" aria-hidden="true">{icon('estrella')}{icon('estrella')}{icon('estrella')}{icon('estrella')}{icon('estrella')}</div>
+        <p class="review-txt">Aquí aparecerá una reseña real de Google cuando esté disponible.</p>
+        <p class="review-who">&mdash;</p>
       </div>
-      <div class="gc" style="opacity:.5">
-        <h3>Próximamente</h3>
-        <p>Espacio reservado para un caso real de negocio o local.</p>
+      <div class="review-card ph">
+        <div class="review-stars" aria-hidden="true">{icon('estrella')}{icon('estrella')}{icon('estrella')}{icon('estrella')}{icon('estrella')}</div>
+        <p class="review-txt">Aquí aparecerá una reseña real de Google cuando esté disponible.</p>
+        <p class="review-who">&mdash;</p>
       </div>
-      <div class="gc" style="opacity:.5">
-        <h3>Próximamente</h3>
-        <p>Espacio reservado para un caso real de particular.</p>
+      <div class="review-card ph">
+        <div class="review-stars" aria-hidden="true">{icon('estrella')}{icon('estrella')}{icon('estrella')}{icon('estrella')}{icon('estrella')}</div>
+        <p class="review-txt">Aquí aparecerá una reseña real de Google cuando esté disponible.</p>
+        <p class="review-who">&mdash;</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 07 · FAQ ══ -->
+<!-- ══ 05 · FAQ ══ -->
 <section id="faq">
   <div class="wrap">
     <div class="sh rv">
-      <p class="eyebrow"><i>07</i>Preguntas frecuentes</p>
+      <p class="eyebrow"><i>05</i>Preguntas frecuentes</p>
       <h2>Dudas<br><em>habituales.</em></h2>
     </div>
     <div class="faq rv">
       <div class="faq-item">
         <button class="faq-q">¿Trabajáis para particulares o solo para comunidades y negocios? <span class="px">+</span></button>
-        <div class="faq-a"><p>Los tres perfiles. Comunidades de propietarios, negocios y locales, y particulares en Madrid y alrededores.</p></div>
+        <div class="faq-a"><p>Los tres perfiles. Comunidades de propietarios, negocios y locales, y particulares en Madrid y toda la Comunidad de Madrid.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">¿El presupuesto tiene algún coste? <span class="px">+</span></button>
@@ -244,21 +246,29 @@ def body():
       </div>
       <div class="faq-item">
         <button class="faq-q">¿En qué zona trabajáis? <span class="px">+</span></button>
-        <div class="faq-a"><p>Madrid capital y municipios cercanos. Escríbenos con tu zona y lo confirmamos.</p></div>
+        <div class="faq-a"><p>Madrid capital y toda la Comunidad de Madrid. Escríbenos con tu zona y lo confirmamos.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 08 · CTA FINAL ══ -->
-<section class="cta">
+<!-- ══ 09 · CONTACTO ══ -->
+<section class="cta" id="contacto">
   <div class="wrap">
-    <p class="eyebrow rv"><i>08</i>Empezar</p>
+    <p class="eyebrow rv"><i>06</i>Contacto</p>
     <h2 class="rv">¿Hablamos de<br><em class="it">tu instalación?</em></h2>
     <p class="sub rv">Cuéntanos qué necesitas y te decimos, con la instalación delante, qué tiene sentido hacer.</p>
-    <div class="hero-cta rv">
-      <a class="btn btn-g" href="./contacto/">Solicitar presupuesto <span class="arw">&#8599;</span></a>
-      <a class="btn btn-o" data-cfg-href="whatsapp" data-wa-msg="Hola Voltorum, quiero pedir información." href="#">Hablar por WhatsApp</a>
+
+    <div class="contact-block rv">
+      <a class="contact-phone" data-cfg-href="tel" href="#">
+        {icon('telefono')}
+        <span data-cfg="telefono_visible">611 066 820</span>
+      </a>
+      <div class="hero-cta" style="margin-top:0">
+        <a class="btn btn-g" data-cfg-href="tel" href="#">Llamar ahora</a>
+        <a class="btn btn-o" data-cfg-href="whatsapp" data-wa-msg="Hola Voltorum, quiero pedir información." href="#">Escribir por WhatsApp</a>
+        <a class="btn btn-o" href="./contacto/">Rellenar formulario</a>
+      </div>
     </div>
   </div>
 </section>

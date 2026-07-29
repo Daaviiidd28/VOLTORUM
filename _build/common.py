@@ -60,9 +60,10 @@ def footer_html(depth):
           <h4>Servicios</h4>
           <ul>
             <li><a href="{r}servicios/averias-electricas/">Averías eléctricas</a></li>
+            <li><a href="{r}servicios/instalaciones-electricas/">Instalaciones eléctricas</a></li>
             <li><a href="{r}servicios/cuadros-electricos/">Cuadros eléctricos</a></li>
-            <li><a href="{r}servicios/mantenimiento-electrico/">Mantenimiento</a></li>
-            <li><a href="{r}servicios/boletines-documentacion/">Boletines y documentación</a></li>
+            <li><a href="{r}servicios/iluminacion-led/">Iluminación LED</a></li>
+            <li><a href="{r}servicios/">Ver todos los servicios</a></li>
           </ul>
         </div>
         <div>
@@ -77,10 +78,10 @@ def footer_html(depth):
         <div>
           <h4>Contacto</h4>
           <ul>
-            <li><a data-cfg-href="tel" href="#">[TELÉFONO]</a></li>
+            <li><a data-cfg-href="tel" data-cfg="telefono_visible" href="#">[TELÉFONO]</a></li>
             <li><a data-cfg-href="whatsapp" href="#">WhatsApp</a></li>
-            <li><a data-cfg-href="email" href="#">[EMAIL]</a></li>
-            <li><span>Madrid y alrededores</span></li>
+            <li><a data-cfg-href="email" data-cfg="email" href="#">[EMAIL]</a></li>
+            <li><span>Madrid</span></li>
           </ul>
         </div>
         <div>
