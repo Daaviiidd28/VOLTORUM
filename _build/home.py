@@ -30,16 +30,6 @@ def body():
   </div>
 </header>
 
-<!-- ══ BARRA DE CONFIANZA ══ -->
-<section class="trust rv" aria-label="Por qué confiar en Voltorum">
-  <div class="wrap trust-in">
-    <div><span class="trust-check">&#10003;</span>Presupuesto gratuito</div>
-    <div><span class="trust-check">&#10003;</span>Atención rápida</div>
-    <div><span class="trust-check">&#10003;</span>Electricistas cualificados</div>
-    <div><span class="trust-check">&#10003;</span>Servicio en toda la Comunidad de Madrid</div>
-  </div>
-</section>
-
 {mini_glow_divider()}
 
 <!-- ══ 01 · SERVICIOS ══ -->
